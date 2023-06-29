@@ -1,12 +1,61 @@
 <html>
   <head>
-	  <script src="script.js"></script>
+	  
     <title>ATConsultant</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <style>
+      .slider {
+        width: 500px;
+        height: 300px;
+        background-color: yellow;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+        text-align: center;
+        overflow: hidden;
+      }
+      .image-container {
+        width: 1500px;
+        background-color: pink;
+        height: 300px;
+        clear: both;
+        position: relative;
+        -webkit-transition: left 2s;
+        -moz-transition: left 2s;
+        -o-transition: left 2s;
+        transition: left 2s;
+      }
+      .slide {
+        float: left;
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+      }
+      #slide-1:target ~ .image-container {
+        left: 0px;
+      }
+      #slide-2:target ~ .image-container {
+        left: -500px;
+      }
+      #slide-3:target ~ .image-container {
+        left: -1000px;
+      }
+      .buttons {
+        position: relative;
+        top: -20px;
+      }
+      .buttons a {
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        border-radius: 50px;
+        background-color: lightgreen;
+      }
+    </style>
     <style>
     body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
@@ -154,57 +203,27 @@ ALLOYS, CARBON STEELS, RUBBER,ETC</p>
   </div>
 </div>
 
-	<style>
-* {
-  box-sizing: border-box;
-}
+	<div class="slider">
+      <span id="slide-1"></span>
+      <span id="slide-2"></span>
+      <span id="slide-3"></span>
+      <div class="image-container">
+        <img src="Aerospace.jpg" class="slide" width="500" height="300" />
+        <img src="Automative.JPG" class="slide" width="500" height="300" />
+        <img src="Industrial pump.JPG" class="slide" width="500" height="300" />
+	      <img src="Industrial values.JPG" class="slide" width="500" height="300" />
+        <img src="Marine.jpg" class="slide" width="500" height="300" />
+        <img src="Defence.jpg" class="slide" width="500" height="300" />
+	      <img src="Power plant.JPG" class="slide" width="500" height="300" />
+        <img src="power-plant-boiler-part.jpg" class="slide" width="500" height="300" />
 
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
-
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-</style>
-</head>
-<body>
-
-<h3 class="short_title">Industries Served</h3>
-
-
-<div class="row">
-  <div class="column">
-    <img src="Industrial values.JPG" alt="Snow" style="width:80%">
-  </div>
-  <div class="column">
-    <img src="Industrial pump.JPG" alt="Forest" style="width:80%">
-  </div>
-	  <div class="column">
-    <img src="Automative.JPG" alt="Forest" style="width:100%">
-  </div>
-	  <div class="column">
-    <img src="Defence.jpg" alt="Forest" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="Power plant.JPG" alt="Mountains" style="width:100%">
-  </div>
-	<div class="row">
-  <div class="column">
-    <img src="Aerospace.jpg" alt="Snow" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="Marine.jpg" alt="Forest" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="power-plant-boiler-part.jpg" alt="Mountains" style="width:100%">
-  </div>
-</div>
+      </div>
+      <div class="buttons">
+        <a href="#slide-1"></a>
+        <a href="#slide-2"></a>
+        <a href="#slide-3"></a>
+      </div>
+    </div>
 
 
 <!-- Skills Section -->
